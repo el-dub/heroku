@@ -13,7 +13,7 @@ FROM openjdk:11-jre-slim
 
 WORKDIR /app
 
-COPY --from=MAVEN_BUILD /build/target/discount-1.0-SNAPSHOT.jar /app/
+COPY --from=MAVEN_BUILD /build/target/heroku-test-lala-0.0.1-SNAPSHOT.jar /app/
 
-ENTRYPOINT ["java","-jar", "discount-1.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar", "heroku-test-lala-0.0.1-SNAPSHOT.jar"]
 #CMD [ "sh", "-c", "java -Dserver.port=$PORT -Xmx280m -jar discount-1.0-SNAPSHOT.jar"]
